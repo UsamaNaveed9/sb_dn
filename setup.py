@@ -11,7 +11,7 @@ setup(
 	version=version,
 	description="SB",
 	author="Usama",
-	author_email="usamanaveed9263",
+	author_email="usamanaveed9263@gmail.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

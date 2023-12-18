@@ -102,13 +102,15 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+    "Delivery Note": {"on_submit":"sb_dn.custompy.delivery_note.make_stock_entry"},
+    "Sales Invoice": {"on_submit":"sb_dn.custompy.sales_invoice.make_stock_entry"}
 #	"*": {
 #		"on_update": "method",
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
-# }
+}
 
 # Scheduled Tasks
 # ---------------
