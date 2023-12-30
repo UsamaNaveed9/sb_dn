@@ -11,6 +11,7 @@ def make_stock_entry(doc,action):
 		new_doc = frappe.new_doc("Stock Entry")
 		new_doc.stock_entry_type = "Material Issue"
 		new_doc.company = doc.company
+		new_doc.set_posting_time = 1
 		new_doc.posting_date = doc.posting_date
 		new_doc.from_warehouse = frappe.db.get_single_value("Stock Settings", "default_delivered_warehouse")
 		for it in doc.items:
